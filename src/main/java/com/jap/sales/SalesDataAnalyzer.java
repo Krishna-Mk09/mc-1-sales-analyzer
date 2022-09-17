@@ -5,11 +5,11 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class SalesDataAnalyzer {
-
     SalesDataAnalyzer salesDataAnalyzer = null;
     int countLines = 0;
 
     // This method reads a file and adds each line of the file into the corresponding SalesRecord object
+    // The above code is reading a file and creating an array of SalesRecord objects.
     public SalesRecord[] readFile(String fileName) {
         try (FileReader fileReader = new FileReader(fileName); BufferedReader bufferedReader = new BufferedReader(fileReader)) {
             String headers = bufferedReader.readLine();

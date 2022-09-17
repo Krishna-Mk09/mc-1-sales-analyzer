@@ -9,7 +9,6 @@ public class SalesRecord {
     private double timeOnSite;
     private int clicksInSite;
 
-    // Generate Constructors
     public SalesRecord(String date, int customerId, int productCategory, String paymentMethod, double amount, double timeOnSite, int clicksInSite) {
         this.date = date;
         this.customerId = customerId;
@@ -79,8 +78,7 @@ public class SalesRecord {
         this.clicksInSite = clicksInSite;
     }
 
-    // Generate Getters and Setters
-    // Generate the toString method
+    // A method that is used to print the object.
     @Override
     public String toString() {
         return "SalesRecord{" + "date='" + date + '\'' + ", customer_id=" + customerId + ", product_category=" + productCategory + ", payment_method='" + paymentMethod + '\'' + ", amount=" + amount + ", time_on_site=" + timeOnSite + ", clicks_in_site=" + clicksInSite + '}';

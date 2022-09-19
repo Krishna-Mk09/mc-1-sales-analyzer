@@ -12,13 +12,12 @@ public class SalesDataAnalyzer {
     // The above code is reading a file and creating an array of SalesRecord objects.
     public SalesRecord[] readFile(String fileName) {
         try (FileReader fileReader = new FileReader(fileName); BufferedReader bufferedReader = new BufferedReader(fileReader)) {
-            String headers = bufferedReader.readLine();
-            String line;
+            String line = bufferedReader.readLine();
             while ((line = bufferedReader.readLine()) != null) {
                 countLines++;
             }
-        } catch (IOException e) {
-            System.err.println(e.getMessage());
+        } catch (IOException exception) {
+            System.err.println(exception.getMessage());
         }
         System.out.println("count - " + countLines);
         SalesRecord[] salesRecord = new SalesRecord[countLines];
@@ -39,8 +38,8 @@ public class SalesDataAnalyzer {
                 salesRecord[index] = newSalesRecord;
                 index++;
             }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        } catch (IOException exception) {
+            throw new RuntimeException(exception);
         }
         return salesRecord;
     }
